@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import List
 
 
-class Product(BaseModel):
+class ProductSchema(BaseModel):
     name: str
     price: float
 
@@ -10,7 +10,7 @@ class Product(BaseModel):
         from_attributes = True
 
 
-class ProductResponse(BaseModel):
+class ProductResponseSchema(BaseModel):
     id: int
     name: str
     price: float

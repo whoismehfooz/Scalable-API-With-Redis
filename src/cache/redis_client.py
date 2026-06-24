@@ -7,8 +7,3 @@ redis_client = redis.Redis(
     decode_responses=True
 )
 
-redis_client.set("framework", "fastapi", ex=30)
-
-for i in range(5):
-    print(redis_client.ttl("framework"))
-    time.sleep(3)
